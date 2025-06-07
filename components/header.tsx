@@ -18,7 +18,7 @@ export function Header() {
             <a href="#home" className="flex items-center">
               <img 
                 src="/logo-03.svg" 
-                alt="LUXEWEAR Golden Logo" 
+                alt="Kings Mens Golden Logo" 
                 className="h-12 w-auto logo-golden" 
               />
             </a>

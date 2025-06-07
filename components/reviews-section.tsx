@@ -19,7 +19,7 @@ export function ReviewsSection() {
       avatar: "/images/people/model-1.jpg",
       rating: 5,
       review:
-        "Absolutely love my new LUXEWEAR pieces! The quality is exceptional and the fit is perfect. The premium cotton tee is so comfortable and the jeans have the perfect cut. Will definitely be ordering more!",
+        "Absolutely love my new Kings Mens pieces! The quality is exceptional and the fit is perfect. The premium cotton tee is so comfortable and the jeans have the perfect cut. Will definitely be ordering more!",
       product: "Premium Cotton Tee & Designer Slim Jeans",
       date: "2 weeks ago",
     },
@@ -39,7 +39,7 @@ export function ReviewsSection() {
       avatar: "/images/people/model-3.jpg",
       rating: 5,
       review:
-        "I've been searching for the perfect jeans for years, and I finally found them at LUXEWEAR. The fit is incredible and they're so well-made. Worth every penny!",
+        "I've been searching for the perfect jeans for years, and I finally found them at Kings Mens. The fit is incredible and they're so well-made. Worth every penny!",
       product: "High-Waist Skinny Jeans",
       date: "3 weeks ago",
     },
@@ -59,7 +59,7 @@ export function ReviewsSection() {
       avatar: "/images/people/model-5.jpg",
       rating: 5,
       review:
-        "LUXEWEAR has become my go-to brand for premium basics. The quality is consistent and the designs are timeless. I love that they're also committed to sustainable practices.",
+        "Kings Mens has become my go-to brand for premium basics. The quality is consistent and the designs are timeless. I love that they're also committed to sustainable practices.",
       product: "Organic Cotton Crew Tee",
       date: "2 months ago",
     },
@@ -265,7 +265,7 @@ export function ReviewsSection() {
               <span className="text-xl sm:text-2xl font-bold text-gray-900 ml-3">4.8</span>
             </div>
             <p className="text-sm sm:text-base text-gray-600 mb-2">Based on 1,247+ verified reviews</p>
-            <p className="text-xs sm:text-sm text-gray-500">Join thousands of satisfied customers who trust LUXEWEAR</p>
+            <p className="text-xs sm:text-sm text-gray-500">Join thousands of satisfied customers who trust Kings Mens</p>
           </div>
         </div>
 

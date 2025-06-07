@@ -34,7 +34,7 @@ export function Footer() {
             <div className="flex items-center mb-4">
               <img
                 src="/logo-04.svg"
-                alt="LUXEWEAR Gray-Orange Logo"
+                alt="Kings Mens Gray-Orange Logo"
                 className="h-12 w-auto logo-gray-orange"
               />
             </div>
@@ -52,7 +52,7 @@ export function Footer() {
               </div>
               <div className="flex items-center text-gray-400">
                 <Mail className="h-5 w-5 mr-3 text-amber-600" />
-                <span>hello@luxewear.com</span>
+                <span>hello@kingsmens.com</span>
               </div>
             </div>
           </div>
@@ -182,7 +182,7 @@ export function Footer() {
       <div className="border-t border-gray-800">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400 text-sm">© 2025 LUXEWEAR. All rights reserved.</p>
+            <p className="text-gray-400 text-sm">© 2025 Kings Mens. All rights reserved.</p>
             <div className="flex items-center space-x-6 mt-4 md:mt-0">
               <img src="/placeholder.svg?height=24&width=40" alt="Visa" className="h-6 opacity-70" />
               <img src="/placeholder.svg?height=24&width=40" alt="Mastercard" className="h-6 opacity-70" />

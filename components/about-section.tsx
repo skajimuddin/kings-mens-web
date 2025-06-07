@@ -7,7 +7,7 @@ export function AboutSection() {
         <div className="mx-auto mb-10 flex justify-center">
           <img
             src="/logo-05.svg"
-            alt="LUXEWEAR Gray-Blue Logo"
+            alt="Kings Mens Gray-Blue Logo"
             className="h-16 w-auto logo-gray-blue"
           />
         </div>
@@ -17,7 +17,7 @@ export function AboutSection() {
             <span className="text-amber-600">Extraordinary</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            LUXEWEAR represents the pinnacle of fashion excellence. Each piece in
+            Kings Mens represents the pinnacle of fashion excellence. Each piece in
             our collection is meticulously crafted using the finest materials and
             innovative techniques, ensuring unparalleled quality and timeless
             style.
