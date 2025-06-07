@@ -1,0 +1,14 @@
+/* Logo Colors */
+.logo-golden {
+  filter: invert(63%) sepia(61%) saturate(372%) hue-rotate(356deg) brightness(88%) contrast(90%);
+}
+
+.logo-gray-orange {
+  /* For #ddaf74 */
+  filter: invert(78%) sepia(18%) saturate(664%) hue-rotate(355deg) brightness(93%) contrast(87%);
+}
+
+.logo-gray-blue {
+  /* For #263954 */
+  filter: invert(19%) sepia(51%) saturate(502%) hue-rotate(181deg) brightness(95%) contrast(89%);
+}
