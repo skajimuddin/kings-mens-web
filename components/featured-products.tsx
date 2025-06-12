@@ -52,11 +52,12 @@ export function FeaturedProducts() {
     <section className="py-16 lg:py-24 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-            Featured <span className="text-amber-600">Collection</span>
+          <h2 className="text-3xl lg:text-4xl font-bold text-[#263954] mb-4">
+            Featured <span className="text-[#f7c981]">Collection</span>
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Discover our handpicked selection of premium pieces that define luxury fashion
+          <p className="text-lg text-[#263954] max-w-2xl mx-auto">
+            Discover our handpicked selection of premium pieces that define
+            luxury fashion
           </p>
         </div>
 

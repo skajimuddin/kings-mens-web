@@ -153,13 +153,16 @@ export function ReviewsSection() {
   }
 
   return (
-    <section id="reviews" className="py-8 sm:py-12 lg:py-16 xl:py-24 bg-white overflow-hidden">
+    <section
+      id="reviews"
+      className="py-8 sm:py-12 lg:py-16 xl:py-24 bg-white overflow-hidden"
+    >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-8 sm:mb-12 lg:mb-16">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-            What Our <span className="text-amber-600">Customers Say</span>
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#263954] mb-4">
+            What Our <span className="text-[#f7c981]">Customers Say</span>
           </h2>
-          <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto px-4">
+          <p className="text-base sm:text-lg text-[#263954] max-w-2xl mx-auto px-4">
             Don't just take our word for it - hear from our satisfied customers
           </p>
         </div>
@@ -170,7 +173,7 @@ export function ReviewsSection() {
           <Button
             variant="outline"
             size="icon"
-            className={`absolute left-2 top-1/2 transform -translate-y-1/2 z-10 bg-white/90 hover:bg-white shadow-lg border-gray-200 hidden sm:flex ${
+            className={`absolute left-2 top-1/2 transform -translate-y-1/2 z-10 bg-white/90 hover:bg-white shadow-lg border-[#f7c981] text-[#263954] hidden sm:flex ${
               !canScrollLeft ? "opacity-50 cursor-not-allowed" : ""
             }`}
             onClick={scrollLeft}
@@ -182,7 +185,7 @@ export function ReviewsSection() {
           <Button
             variant="outline"
             size="icon"
-            className={`absolute right-2 top-1/2 transform -translate-y-1/2 z-10 bg-white/90 hover:bg-white shadow-lg border-gray-200 hidden sm:flex ${
+            className={`absolute right-2 top-1/2 transform -translate-y-1/2 z-10 bg-white/90 hover:bg-white shadow-lg border-[#f7c981] text-[#263954] hidden sm:flex ${
               !canScrollRight ? "opacity-50 cursor-not-allowed" : ""
             }`}
             onClick={scrollRight}
@@ -211,26 +214,33 @@ export function ReviewsSection() {
               >
                 <CardContent className="p-4 sm:p-6 h-full flex flex-col">
                   <div className="flex items-center mb-3 sm:mb-4">
-                    <Quote className="h-6 w-6 sm:h-8 sm:w-8 text-amber-600 mb-2" />
+                    <Quote className="h-6 w-6 sm:h-8 sm:w-8 text-[#f7c981] mb-2" />
                   </div>
 
                   <div className="star-rating flex items-center mb-3 sm:mb-4">
                     {[...Array(5)].map((_, i) => (
                       <Star
                         key={i}
-                        className={`star h-3 w-3 sm:h-4 sm:w-4 transition-all duration-200 ${i < review.rating ? "text-amber-400 fill-current" : "text-gray-300"}`}
+                        className={`star h-3 w-3 sm:h-4 sm:w-4 transition-all duration-200 ${
+                          i < review.rating
+                            ? "text-[#f7c981] fill-current"
+                            : "text-gray-300"
+                        }`}
                       />
                     ))}
                   </div>
 
-                  <p className="text-sm sm:text-base text-gray-700 mb-4 sm:mb-6 leading-relaxed flex-grow">
+                  <p className="text-sm sm:text-base text-[#263954] mb-4 sm:mb-6 leading-relaxed flex-grow">
                     "{review.review}"
                   </p>
 
                   <div className="border-t pt-3 sm:pt-4 mt-auto">
                     <div className="flex items-center mb-2">
                       <Avatar className="h-10 w-10 sm:h-12 sm:w-12 mr-3 sm:mr-4">
-                        <AvatarImage src={review.avatar || "/placeholder.svg"} alt={review.name} />
+                        <AvatarImage
+                          src={review.avatar || "/placeholder.svg"}
+                          alt={review.name}
+                        />
                         <AvatarFallback className="text-xs sm:text-sm">
                           {review.name
                             .split(" ")
@@ -239,11 +249,15 @@ export function ReviewsSection() {
                         </AvatarFallback>
                       </Avatar>
                       <div className="min-w-0 flex-1">
-                        <h4 className="font-semibold text-gray-900 text-sm sm:text-base truncate">{review.name}</h4>
-                        <p className="text-xs sm:text-sm text-gray-600">{review.date}</p>
+                        <h4 className="font-semibold text-[#263954] text-sm sm:text-base truncate">
+                          {review.name}
+                        </h4>
+                        <p className="text-xs sm:text-sm text-[#263954]/70">
+                          {review.date}
+                        </p>
                       </div>
                     </div>
-                    <p className="text-xs sm:text-sm text-amber-600 font-medium truncate">
+                    <p className="text-xs sm:text-sm text-[#f7c981] font-medium truncate">
                       Purchased: {review.product}
                     </p>
                   </div>
@@ -259,13 +273,22 @@ export function ReviewsSection() {
             <div className="flex items-center justify-center mb-4">
               <div className="flex items-center">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="h-5 w-5 sm:h-6 sm:w-6 text-amber-400 fill-current" />
+                  <Star
+                    key={i}
+                    className="h-5 w-5 sm:h-6 sm:w-6 text-[#f7c981] fill-current"
+                  />
                 ))}
               </div>
-              <span className="text-xl sm:text-2xl font-bold text-gray-900 ml-3">4.8</span>
+              <span className="text-xl sm:text-2xl font-bold text-[#263954] ml-3">
+                4.8
+              </span>
             </div>
-            <p className="text-sm sm:text-base text-gray-600 mb-2">Based on 1,247+ verified reviews</p>
-            <p className="text-xs sm:text-sm text-gray-500">Join thousands of satisfied customers who trust Kings Mens</p>
+            <p className="text-sm sm:text-base text-[#263954] mb-2">
+              Based on 1,247+ verified reviews
+            </p>
+            <p className="text-xs sm:text-sm text-[#263954]/70">
+              Join thousands of satisfied customers who trust Kings Mens
+            </p>
           </div>
         </div>
 
@@ -273,98 +296,108 @@ export function ReviewsSection() {
         <div className="flex justify-center mt-4 sm:hidden">
           <div className="flex space-x-2">
             {[...Array(3)].map((_, i) => (
-              <div key={i} className="w-2 h-2 bg-gray-300 rounded-full"></div>
+              <div key={i} className="w-2 h-2 bg-[#f7c981] rounded-full"></div>
             ))}
           </div>
         </div>
       </div>
 
       <style jsx>{`
-  .scrollbar-hide {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
-  .scrollbar-hide::-webkit-scrollbar {
-    display: none;
-  }
-  
-  /* Smooth scroll animation */
-  .scrollbar-hide {
-    scroll-behavior: smooth;
-  }
-  
-  /* Card entrance animation */
-  @keyframes slideInFromRight {
-    from {
-      opacity: 0;
-      transform: translateX(50px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-  
-  /* Card hover animation */
-  @keyframes cardFloat {
-    0%, 100% {
-      transform: translateY(0px);
-    }
-    50% {
-      transform: translateY(-8px);
-    }
-  }
-  
-  /* Pulse animation for rating stars */
-  @keyframes starPulse {
-    0%, 100% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.1);
-    }
-  }
-  
-  /* Apply animations */
-  .review-card {
-    animation: slideInFromRight 0.6s ease-out;
-  }
-  
-  .review-card:hover {
-    animation: cardFloat 2s ease-in-out infinite;
-  }
-  
-  .star-rating:hover .star {
-    animation: starPulse 0.3s ease-in-out;
-  }
-  
-  /* Gradient overlay for smooth infinite scroll effect */
-  .scroll-container::before,
-  .scroll-container::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 40px;
-    z-index: 2;
-    pointer-events: none;
-  }
-  
-  .scroll-container::before {
-    left: 0;
-    background: linear-gradient(to right, rgba(255,255,255,1), rgba(255,255,255,0));
-  }
-  
-  .scroll-container::after {
-    right: 0;
-    background: linear-gradient(to left, rgba(255,255,255,1), rgba(255,255,255,0));
-  }
-  
-  /* Smooth transition for pause/resume */
-  .scroll-container {
-    transition: scroll-behavior 0.3s ease;
-  }
-`}</style>
+        .scrollbar-hide {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+        }
+        .scrollbar-hide::-webkit-scrollbar {
+          display: none;
+        }
+
+        /* Smooth scroll animation */
+        .scrollbar-hide {
+          scroll-behavior: smooth;
+        }
+
+        /* Card entrance animation */
+        @keyframes slideInFromRight {
+          from {
+            opacity: 0;
+            transform: translateX(50px);
+          }
+          to {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+
+        /* Card hover animation */
+        @keyframes cardFloat {
+          0%,
+          100% {
+            transform: translateY(0px);
+          }
+          50% {
+            transform: translateY(-8px);
+          }
+        }
+
+        /* Pulse animation for rating stars */
+        @keyframes starPulse {
+          0%,
+          100% {
+            transform: scale(1);
+          }
+          50% {
+            transform: scale(1.1);
+          }
+        }
+
+        /* Apply animations */
+        .review-card {
+          animation: slideInFromRight 0.6s ease-out;
+        }
+
+        .review-card:hover {
+          animation: cardFloat 2s ease-in-out infinite;
+        }
+
+        .star-rating:hover .star {
+          animation: starPulse 0.3s ease-in-out;
+        }
+
+        /* Gradient overlay for smooth infinite scroll effect */
+        .scroll-container::before,
+        .scroll-container::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          width: 40px;
+          z-index: 2;
+          pointer-events: none;
+        }
+
+        .scroll-container::before {
+          left: 0;
+          background: linear-gradient(
+            to right,
+            rgba(255, 255, 255, 1),
+            rgba(255, 255, 255, 0)
+          );
+        }
+
+        .scroll-container::after {
+          right: 0;
+          background: linear-gradient(
+            to left,
+            rgba(255, 255, 255, 1),
+            rgba(255, 255, 255, 0)
+          );
+        }
+
+        /* Smooth transition for pause/resume */
+        .scroll-container {
+          transition: scroll-behavior 0.3s ease;
+        }
+      `}</style>
     </section>
   )
 }

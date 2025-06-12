@@ -14,7 +14,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <head>
+        <link rel="stylesheet" href="/images/logo-style.css" />
+      </head>
+      <body className="min-h-screen bg-background text-foreground">
+        {children}
+      </body>
     </html>
   )
 }

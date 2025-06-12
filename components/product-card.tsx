@@ -45,8 +45,16 @@ export function ProductCard({ product }: ProductCardProps) {
 
         {/* Badges */}
         <div className="absolute top-4 left-4 flex flex-col gap-2">
-          {product.isNew && <Badge className="bg-amber-600 hover:bg-amber-700 text-white">NEW</Badge>}
-          {discount > 0 && <Badge className="bg-red-500 hover:bg-red-600 text-white">-{discount}%</Badge>}
+          {product.isNew && (
+            <Badge className="bg-[#f7c981] hover:bg-[#e5b76d] text-[#263954] font-medium">
+              NEW
+            </Badge>
+          )}
+          {discount > 0 && (
+            <Badge className="bg-red-500 hover:bg-red-600 text-white">
+              -{discount}%
+            </Badge>
+          )}
         </div>
 
         {/* Wishlist Button */}
@@ -67,11 +75,18 @@ export function ProductCard({ product }: ProductCardProps) {
             isHovered ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
           }`}
         >
-          <Button size="sm" className="flex-1 bg-amber-600 hover:bg-amber-700 text-white">
+          <Button
+            size="sm"
+            className="flex-1 bg-[#f7c981] hover:bg-[#e5b76d] text-[#263954] font-medium"
+          >
             <ShoppingCart className="h-4 w-4 mr-2" />
             Add to Cart
           </Button>
-          <Button variant="outline" size="icon" className="bg-white/90 hover:bg-white">
+          <Button
+            variant="outline"
+            size="icon"
+            className="bg-white/90 hover:bg-white border-[#f7c981] text-[#263954]"
+          >
             <Eye className="h-4 w-4" />
           </Button>
         </div>
@@ -79,10 +94,12 @@ export function ProductCard({ product }: ProductCardProps) {
 
       <CardContent className="p-6">
         <div className="mb-2">
-          <span className="text-sm text-amber-600 font-medium">{product.category}</span>
+          <span className="text-sm text-[#f7c981] font-medium">
+            {product.category}
+          </span>
         </div>
 
-        <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-amber-600 transition-colors">
+        <h3 className="text-lg font-semibold text-[#263954] mb-2 group-hover:text-[#f7c981] transition-colors">
           {product.name}
         </h3>
 
@@ -92,27 +109,33 @@ export function ProductCard({ product }: ProductCardProps) {
               <Star
                 key={i}
                 className={`h-4 w-4 ${
-                  i < Math.floor(product.rating) ? "text-amber-400 fill-current" : "text-gray-300"
+                  i < Math.floor(product.rating)
+                    ? "text-[#f7c981] fill-current"
+                    : "text-gray-300"
                 }`}
               />
             ))}
           </div>
-          <span className="text-sm text-gray-600 ml-2">
+          <span className="text-sm text-[#263954] ml-2">
             {product.rating} ({product.reviews})
           </span>
         </div>
 
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <span className="text-xl font-bold text-gray-900">${product.price}</span>
+            <span className="text-xl font-bold text-[#263954]">
+              ${product.price}
+            </span>
             {product.originalPrice && (
-              <span className="text-sm text-gray-500 line-through">${product.originalPrice}</span>
+              <span className="text-sm text-gray-500 line-through">
+                ${product.originalPrice}
+              </span>
             )}
           </div>
           <Button
             variant="outline"
             size="sm"
-            className="border-amber-600 text-amber-600 hover:bg-amber-600 hover:text-white"
+            className="border-[#f7c981] text-[#263954] hover:bg-[#f7c981] hover:text-[#263954]"
           >
             Buy Now
           </Button>

@@ -108,19 +108,34 @@ export function AllProducts() {
     <section id="products" className="py-16 lg:py-24 bg-gray-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-            Complete <span className="text-amber-600">Collection</span>
+          <h2 className="text-3xl lg:text-4xl font-bold text-[#263954] mb-4">
+            Complete <span className="text-[#f7c981]">Collection</span>
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg text-[#263954] max-w-2xl mx-auto">
             Explore our full range of premium fashion essentials
           </p>
         </div>
 
         <Tabs defaultValue="all" className="w-full">
           <TabsList className="grid w-full max-w-md mx-auto grid-cols-3 mb-12">
-            <TabsTrigger value="all">All Products</TabsTrigger>
-            <TabsTrigger value="tshirts">T-Shirts</TabsTrigger>
-            <TabsTrigger value="jeans">Jeans</TabsTrigger>
+            <TabsTrigger
+              value="all"
+              className="data-[state=active]:bg-[#f7c981] data-[state=active]:text-[#263954]"
+            >
+              All Products
+            </TabsTrigger>
+            <TabsTrigger
+              value="tshirts"
+              className="data-[state=active]:bg-[#f7c981] data-[state=active]:text-[#263954]"
+            >
+              T-Shirts
+            </TabsTrigger>
+            <TabsTrigger
+              value="jeans"
+              className="data-[state=active]:bg-[#f7c981] data-[state=active]:text-[#263954]"
+            >
+              Jeans
+            </TabsTrigger>
           </TabsList>
 
           <TabsContent value="all">
@@ -135,7 +150,7 @@ export function AllProducts() {
                   onClick={() => setShowAll(true)}
                   variant="outline"
                   size="lg"
-                  className="border-amber-600 text-amber-600 hover:bg-amber-600 hover:text-white"
+                  className="border-[#f7c981] text-[#263954] hover:bg-[#f7c981] hover:text-[#263954]"
                 >
                   View All Products
                 </Button>

@@ -4,48 +4,74 @@
 
 @layer base {
   :root {
+    /* Primary color: #263954 (navy blue) */
+    --primary-hue: 214;
+    --primary-saturation: 40%;
+    --primary-lightness: 24%;
+    
+    /* Secondary color: #f7c981 (golden yellow) */
+    --secondary-hue: 39;
+    --secondary-saturation: 90%;
+    --secondary-lightness: 74%;
+    
+    /* Configure all theme colors based on our primary and secondary colors */
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: var(--primary-hue) var(--primary-saturation) var(--primary-lightness);
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: var(--primary-hue) var(--primary-saturation) var(--primary-lightness);
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --popover-foreground: var(--primary-hue) var(--primary-saturation) var(--primary-lightness);
+    --primary: var(--primary-hue) var(--primary-saturation) var(--primary-lightness);
+    --primary-foreground: 0 0% 100%;
+    --secondary: var(--secondary-hue) var(--secondary-saturation) var(--secondary-lightness);
+    --secondary-foreground: var(--primary-hue) var(--primary-saturation) var(--primary-lightness);
+    --muted: var(--primary-hue) var(--primary-saturation) 92%;
+    --muted-foreground: var(--primary-hue) var(--primary-saturation) 45%;
+    --accent: var(--secondary-hue) var(--secondary-saturation) 90%;
+    --accent-foreground: var(--primary-hue) var(--primary-saturation) 20%;
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --destructive-foreground: 0 0% 100%;
+    --border: var(--primary-hue) 15% 85%;
+    --input: var(--primary-hue) 15% 85%;
+    --ring: var(--secondary-hue) var(--secondary-saturation) var(--secondary-lightness);
     --radius: 0.5rem;
+    
+    /* Primary color variants */
+    --primary-light: var(--primary-hue) var(--primary-saturation) 34%;
+    --primary-dark: var(--primary-hue) var(--primary-saturation) 15%;
+    
+    /* Secondary color variants */
+    --secondary-light: var(--secondary-hue) var(--secondary-saturation) 84%;
+    --secondary-dark: var(--secondary-hue) var(--secondary-saturation) 64%;
+    
+    /* Navy shades */
+    --navy-900: var(--primary-hue) var(--primary-saturation) 15%;
+    --navy-800: var(--primary-hue) var(--primary-saturation) 20%;
+    --navy-700: var(--primary-hue) var(--primary-saturation) 25%;
+    --navy-600: var(--primary-hue) var(--primary-saturation) 30%;
+    --navy-500: var(--primary-hue) var(--primary-saturation) 35%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --background: var(--primary-hue) var(--primary-saturation) 10%;
+    --foreground: 0 0% 95%;
+    --card: var(--primary-hue) var(--primary-saturation) 15%;
+    --card-foreground: 0 0% 95%;
+    --popover: var(--primary-hue) var(--primary-saturation) 15%;
+    --popover-foreground: 0 0% 95%;
+    --primary: var(--primary-hue) 30% 50%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: var(--secondary-hue) 50% 50%;
+    --secondary-foreground: var(--primary-hue) 15% 15%;
+    --muted: var(--primary-hue) 25% 25%;
+    --muted-foreground: var(--primary-hue) 15% 65%;
+    --accent: var(--secondary-hue) 30% 45%;
+    --accent-foreground: 0 0% 100%;
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --destructive-foreground: 0 0% 95%;
+    --border: var(--primary-hue) 25% 30%;
+    --input: var(--primary-hue) 25% 30%;
+    --ring: var(--secondary-hue) 50% 60%;
   }
 }
 
@@ -55,6 +81,7 @@
   }
   body {
     @apply bg-background text-foreground;
+    color: #263954;
   }
 }
 
@@ -68,12 +95,12 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #d97706;
+  background: #263954;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #b45309;
+  background: #192738;
 }
 
 /* Smooth scrolling */
@@ -98,16 +125,22 @@ html {
 }
 
 /* Logo Colors */
-.logo-golden {
-  filter: invert(63%) sepia(61%) saturate(372%) hue-rotate(356deg) brightness(88%) contrast(90%);
-}
-
-.logo-gray-orange {
-  /* For #ddaf74 */
-  filter: invert(78%) sepia(18%) saturate(664%) hue-rotate(355deg) brightness(93%) contrast(87%);
-}
-
-.logo-gray-blue {
-  /* For #263954 */
+.logo-primary {
+  /* For #263954 (Primary) */
   filter: invert(19%) sepia(51%) saturate(502%) hue-rotate(181deg) brightness(95%) contrast(89%);
+}
+
+.logo-secondary {
+  /* For #f7c981 (Secondary) */
+  filter: invert(83%) sepia(27%) saturate(1095%) hue-rotate(325deg) brightness(103%) contrast(97%);
+}
+
+.logo-primary-light {
+  /* For lighter shade of primary */
+  filter: invert(29%) sepia(17%) saturate(1152%) hue-rotate(179deg) brightness(94%) contrast(87%);
+}
+
+.logo-secondary-dark {
+  /* For darker shade of secondary */
+  filter: invert(75%) sepia(38%) saturate(721%) hue-rotate(335deg) brightness(96%) contrast(93%);
 }

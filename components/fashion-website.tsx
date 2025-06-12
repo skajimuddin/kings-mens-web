@@ -10,7 +10,7 @@ import { Footer } from "@/components/footer"
 
 export function FashionWebsite() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white text-[#263954]">
       <Header />
       <HeroSection />
       <AboutSection />
