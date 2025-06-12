@@ -47,7 +47,7 @@ export function HeroSection() {
           <Button
             variant="outline"
             size="lg"
-            className="border-white text-white hover:bg-white hover:text-[#263954] px-8 py-3 text-lg"
+            className="border-white text-primary hover:bg-white hover:text-[#263954] px-8 py-3 text-lg"
           >
             View Lookbook
           </Button>

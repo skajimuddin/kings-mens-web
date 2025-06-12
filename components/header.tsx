@@ -17,9 +17,9 @@ export function Header() {
           <div className="flex-shrink-0">
             <a href="#home" className="flex items-center">
               <img
-                src="/logo-03.svg"
+                src="/logo-05.svg"
                 alt="Kings Mens Logo"
-                className="h-12 w-auto logo-secondary"
+                className="h-14 w-auto logo-secondary"
               />
             </a>
           </div>

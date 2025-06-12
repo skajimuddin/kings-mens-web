@@ -30,9 +30,9 @@ export function Footer() {
 
       {/* Main Footer Content */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Brand Info */}
-          <div className="lg:col-span-1">
+          <div className="col-span-2 lg:col-span-1">
             <div className="flex items-center mb-4">
               <img
                 src="/logo-04.svg"
@@ -61,7 +61,7 @@ export function Footer() {
           </div>
 
           {/* Quick Links */}
-          <div>
+          <div className="col-span-1">
             <h3 className="text-lg font-semibold mb-6 text-white">
               Quick Links
             </h3>
@@ -118,7 +118,7 @@ export function Footer() {
           </div>
 
           {/* Customer Service */}
-          <div>
+          <div className="col-span-1">
             <h3 className="text-lg font-semibold mb-6">Customer Service</h3>
             <ul className="space-y-3">
               <li>
@@ -173,7 +173,7 @@ export function Footer() {
           </div>
 
           {/* Legal & Social */}
-          <div>
+          <div className="col-span-2 md:col-span-1">
             <h3 className="text-lg font-semibold mb-6">Legal & Social</h3>
             <ul className="space-y-3 mb-6">
               <li>
