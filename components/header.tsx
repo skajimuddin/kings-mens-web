@@ -19,7 +19,7 @@ export function Header() {
               <img
                 src="/logo-04.svg"
                 alt="Kings Mens Logo"
-                className="h-14 w-auto logo-secondary"
+                className="h-14 w-auto"
               />
             </a>
           </div>
